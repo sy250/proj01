@@ -1,0 +1,57 @@
+{
+    "compilerOptions": {
+      "allowSyntheticDefaultImports": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "noUnusedLocals": true,
+      "noImplicitAny": true,
+      "declarationDir": "dist/types", // add
+      "declaration": true, // add
+      "target": "es2015",
+      "module": "es2015",
+      "strict": true,
+      "jsx": "react"
+    },
+    "files" : [ // add
+      "./node_modules/@kintone/dts-gen/kintone.d.ts",
+      "./src/fields.d.ts"
+    ],
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+}
+
+// {
+//     "compilerOptions": {
+//       "allowSyntheticDefaultImports": true,
+//       "noFallthroughCasesInSwitch": true,
+//       "noUnusedParameters": true,
+//       "noImplicitReturns": true,
+//       "esModuleInterop": true,
+//       "noUnusedLocals": true,
+//       "noImplicitAny": true,
+//       "declarationDir": "dist/types",
+//       "declaration": true,
+//       "target": "es5",
+//       "module": "es2015",
+//       "strict": true
+//     },
+//     "files" : [
+//       "./node_modules/@kintone/dts-gen/kintone.d.ts",
+//       "./src/sample-fields.d.ts"
+//     ],
+//     "include": [
+//       "src/**/*"
+//     ],
+//     "exclude": [
+//       "dist",
+//       "node_modules"
+//     ]
+// }

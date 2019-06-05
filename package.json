@@ -1,0 +1,43 @@
+{
+  "name": "app01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha -r ts-node/register test/**/*.ts",
+    "dev": "npx webpack-cli --mode development",
+    "typesync": "npx typesync",
+    "unittest": "npx mocha ",
+    "mocha": "mocha ts -w test/**/*.ts",
+    "mocha_watch": "mocha --watch-extensions ts -w test/*.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@kintone/dts-gen": "^1.0.3",
+    "@types/babel__core": "^7.1.2",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "@types/webpack": "^4.4.32",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "fork-ts-checker-webpack-plugin": "^1.3.5",
+    "ginue": "^2.1.2",
+    "mocha": "^6.1.4",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1",
+    "typesync": "^0.5.1",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
