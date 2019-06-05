@@ -26,7 +26,9 @@ kintone.events.on(HANDLE_EVENT_CREATE_SHOW, (event: KintoneEvent) => {
 const HANDLE_EVENT_CREATE = 'app.record.create.submit';
 kintone.events.on(HANDLE_EVENT_CREATE, (event: KintoneEvent) => {
     console.log(event);
-    console.log(deploySubtable(event.record.Table));
+    // console.log(deploySubtable(event.record.Table));
+    let arrayTable = deploySubtable(event.record.Table);
+    window.alert(arrayTable);
     // event.record.borrowLib.value = '駅前分室';
     // event.record.Table.value[0].value.no.value = '1';
     return event;
