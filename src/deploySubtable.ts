@@ -22,4 +22,5 @@ kintone.events.on(HANDLE_EVENT, (event: KintoneEvent) => {
     console.log(event);
     event.record.borrowLib.value = '駅前分室';
     event.record.Table.value[0].value.no.value = '1';
+    return event;
 });

@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@kintone/customize-uploader": "^1.5.3",
     "@kintone/dts-gen": "^1.0.3",
     "@types/babel__core": "^7.1.2",
     "@types/chai": "^4.1.7",
