@@ -1,3 +1,21 @@
+class BorrowBook {
+    
+    No: string;
+    Title: string;
+    ISBN: string;
+    price: number;
+    collectionLib: string;
+
+    constructor () {
+        this.No = "1";
+        this.Title = "";
+        this.ISBN = "";
+        this.price = 0;
+        this.collectionLib = "";
+    }
+        
+}
+
 export function deploySubtable(subtable: any) {
     // const arrayTable = [1, 2, 3];
     const arrayTable = getValue(subtable);
@@ -14,7 +32,7 @@ export default {deploySubtable, getValue};
 
 const HANDLE_EVENT_CREATE_SHOW = 'app.record.create.show';
 interface KintoneEvent {
-    record: kintone.types.Fields;
+    record: kintone.types.SavedFields;
 }
 kintone.events.on(HANDLE_EVENT_CREATE_SHOW, (event: KintoneEvent) => {
     console.log(event);
