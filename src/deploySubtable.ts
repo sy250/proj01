@@ -12,15 +12,22 @@ export function getValue(subtable: any) {
   
 export default {deploySubtable, getValue};
 
-const HANDLE_EVENT = 'app.record.create.show';
+const HANDLE_EVENT_CREATE_SHOW = 'app.record.create.show';
 interface KintoneEvent {
     record: kintone.types.Fields;
 }
-kintone.events.on(HANDLE_EVENT, (event: KintoneEvent) => {
-    // event.record.Number.value = "1";
-    // event.record.Table.value[0].value.Number_Table.value = "1";
+kintone.events.on(HANDLE_EVENT_CREATE_SHOW, (event: KintoneEvent) => {
     console.log(event);
     event.record.borrowLib.value = '駅前分室';
     event.record.Table.value[0].value.no.value = '1';
+    return event;
+});
+
+const HANDLE_EVENT_CREATE = 'app.record.create.submit';
+kintone.events.on(HANDLE_EVENT_CREATE, (event: KintoneEvent) => {
+    console.log(event);
+    console.log(deploySubtable(event.record.Table));
+    // event.record.borrowLib.value = '駅前分室';
+    // event.record.Table.value[0].value.no.value = '1';
     return event;
 });
