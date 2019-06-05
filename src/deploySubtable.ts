@@ -23,12 +23,12 @@ kintone.events.on(HANDLE_EVENT_CREATE_SHOW, (event: KintoneEvent) => {
     return event;
 });
 
-const HANDLE_EVENT_CREATE = 'app.record.create.submit';
+const HANDLE_EVENT_CREATE = ['app.record.create.submit', 'app.record.edit.submit'];
 kintone.events.on(HANDLE_EVENT_CREATE, (event: KintoneEvent) => {
     console.log(event);
     // console.log(deploySubtable(event.record.Table));
     let arrayTable = deploySubtable(event.record.Table);
-    window.alert(arrayTable);
+    window.alert(arrayTable.length);
     // event.record.borrowLib.value = '駅前分室';
     // event.record.Table.value[0].value.no.value = '1';
     return event;
