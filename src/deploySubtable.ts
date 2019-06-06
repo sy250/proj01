@@ -13,7 +13,13 @@ class BorrowBook {
         this.price = 0;
         this.collectionLib = "";
     }
+
+    
         
+}
+
+class BorrowBooks extends BorrowBook{
+
 }
 
 export function deploySubtable(subtable: any) {
